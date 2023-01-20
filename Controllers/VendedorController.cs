@@ -9,7 +9,12 @@ namespace TechTestPaymentApi.Controllers
     public class VendedorController : ControllerBase
     {
         private readonly LojinhaContext _context;
-
+        
+        public VendedorController(LojinhaContext context)
+        {
+            _context = context;
+        }
+        
         [HttpPost]
         public IActionResult Criar(Vendedor vendedor)
         {
