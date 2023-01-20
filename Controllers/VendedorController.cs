@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using TechTestPaymentApi.Context;
 using TechTestPaymentApi.Entities;
 
@@ -16,13 +16,7 @@ namespace TechTestPaymentApi.Controllers
             _context.Vendedores.Add(vendedor);
             _context.SaveChanges();
 
-            return Content("Vendedor criado com sucesso!\n" +
-            $"Identificador: {vendedor.Id}\n" +
-            $"Nome: {vendedor.Nome}\n" +
-            $"CPF: {vendedor.Cpf}\n" +
-            $"Email: {vendedor.Email}\n" +
-            $"Telefone: {vendedor.Telefone}\n"
-            );
+            return Ok(vendedor);
         }
 
         [HttpGet("ObterPorId/{id}")]
