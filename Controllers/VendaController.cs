@@ -11,6 +11,16 @@ namespace TechTestPaymentApi.Controllers
     [Route("[Controller]")]
     public class VendaController : ControllerBase
     {
+            string Nome;
+            int Idade;
+            string Cidade;
+        
+        private void constructorTeste(string nome, int idade, string cidade){
+            Cidade = cidade;
+            Nome = nome;
+            Idade = idade;
+            
+        }
         private readonly LojinhaContext _context;
 
         public VendaController(LojinhaContext context)
